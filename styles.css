@@ -1,8 +1,55 @@
 .space {
-    width: 75vw;
+    width: 95vw;
     height: 95vh;
     padding: 10px;
     background-color: #000;
+}
+
+@keyframes move-invaders {
+    0% {
+        left: 0px;
+        top: 0%;
+    }
+    10% {
+        left: 50%;
+        top: 0%;
+    }
+    20% {
+        left: 100%;
+        top: 50px;
+    }
+    30% {
+        left: 0px;
+        top: 50px;
+    }
+    40% {
+        left: -230px;
+        top: 100px;
+    }
+    50% {
+        left: 0px;
+        top: 100px;
+    }
+    60% {
+        left: -230px;
+        top: 150px;
+    }
+    70% {
+        left: 0px;
+        top: 150px;
+    }
+    80% {
+        left: 0px;
+        top: 200px;
+    }
+    90% {
+        left: 230px;
+        top: 200px;
+    }
+    100% {
+        left: 230px;
+        top: 250px;
+    }
 }
 
 .invaders-box {
@@ -16,6 +63,7 @@
     top: 0;
     left: 0;
     margin: 5px 15px;
+    animation: move-invaders 100s linear infinite;
 }
 
 .defender-box {
@@ -33,6 +81,9 @@
 }
 
 .space-invader-defender {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     box-shadow: 0 0 0 .25em #fff, .625em 0 0 .25em #fff, -.625em 0 0 .25em #fff, 1em .0625em 0 .1875em #fff, -1em .0625em 0 .1875em #fff, 0 -.25em 0 .25em #fff, 0 -.625em 0 0 #fff;
 }
 
@@ -114,6 +165,4 @@
     width: 3px;
     height: 15px;
     position: absolute;
-    bottom: 72px;
-    left: 40px;
 }
