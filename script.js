@@ -42,15 +42,16 @@
     }
 
     const getPositions = (elem) => {
-        var pos = elem.getBoundingClientRect();
+        const width = parseFloat(getComputedStyle(elem, null).width.replace("px", ""));
+        const height = parseFloat(getComputedStyle(elem, null).height.replace("px", ""));
         return [
-            [pos.left, pos.right],
-            [pos.top, pos.bottom]
+            [elem.offsetLeft, elem.offsetLeft + width],
+            [elem.offsetTop, elem.offsetTop + height]
         ];
     }
 
     const comparePositions = (p1, p2) => {
-        var r1, r2;
+        let r1, r2;
         if (p1[0] < p2[0]) {
             r1 = p1;
             r2 = p2;
@@ -67,7 +68,7 @@
             let pos1 = getPositions(m.el);
             invaders.forEach((inv) => {
                 let pos2 = getPositions(inv);
-                if (!comparePositions(pos1, pos2)) {
+                if (comparePositions(pos1, pos2)) {
                     missilesArr.splice(i, 1);
                     inv.parentElement.removeChild(inv);
                 }

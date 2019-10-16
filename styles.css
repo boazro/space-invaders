@@ -7,48 +7,64 @@
 
 @keyframes move-invaders {
     0% {
-        left: 0px;
-        top: 0%;
+        top: 0;
+        left: 0;
     }
-    10% {
-        left: 50%;
-        top: 0%;
+    7% {
+        top: 0;
+        left: 400px;
     }
-    20% {
-        left: 100%;
+    15% {
         top: 50px;
+        left: 400px;
     }
-    30% {
-        left: 0px;
+    21% {
         top: 50px;
+        left: 0
     }
-    40% {
-        left: -230px;
+    28% {
         top: 100px;
+        left: 0;
+    }
+    37% {
+        top: 100px;
+        left: 400px;
+    }
+    43% {
+        top: 150px;
+        left: 400px;
     }
     50% {
-        left: 0px;
-        top: 100px;
-    }
-    60% {
-        left: -230px;
         top: 150px;
+        left: 0;
     }
-    70% {
-        left: 0px;
-        top: 150px;
-    }
-    80% {
-        left: 0px;
+    56% {
         top: 200px;
+        left: 0
+    }
+    62% {
+        top: 200px;
+        left: 400px;
+    }
+    69% {
+        top: 250px;
+        left: 400px;
+    }
+    76% {
+        top: 250px;
+        left: 0;
+    }
+    81% {
+        top: 300px;
+        left: 0
     }
     90% {
-        left: 230px;
-        top: 200px;
+        top: 300px;
+        left: 400px;
     }
     100% {
-        left: 230px;
-        top: 250px;
+        top: 350px;
+        left: 400px;
     }
 }
 
@@ -63,7 +79,7 @@
     top: 0;
     left: 0;
     margin: 5px 15px;
-    animation: move-invaders 100s linear infinite;
+    animation: move-invaders 40s linear;
 }
 
 .defender-box {
